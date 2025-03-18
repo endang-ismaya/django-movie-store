@@ -5,4 +5,5 @@ from apps.movies.models import Movie
 
 @admin.register(Movie)
 class MovieAdmin(admin.ModelAdmin):
-    pass
+    ordering = ["name"]
+    search_fields = ["name", "description"]
